@@ -1,85 +1,27 @@
-# CityVizor
+# CityvizorEmbed
 
-[![dependencies](https://david-dm.org/otevrena-data-mfcr/CityVizor.svg)](https://david-dm.org/otevrena-data-mfcr/CityVizor)
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.5.
 
-Přehledný rozklikávací rozpočet s plněním na jednotlivé faktury a dalšími funkcemi pro samosprávy. Aplikace byla vytvořena zaměstnanci [Ministerstva financí ČR](http://www.mfcr.cz), [Otevřená Města](http://www.otevrenamesta.cz/) vám poskytují tuto aplikaci jako služba. Data jsou poskytována obcemi dobrovolně.
+## Development server
 
-## Instalace
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-### 1) Potřebné balíčky pro instalaci a běh
+## Code scaffolding
 
-- MongoDB
-- NodeJS
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-### 2) Instalace
+## Build
 
-Instalace závislostí
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-```
-npm install
-```
+## Running unit tests
 
-Kompilace kódu
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-```
-npm run build
-```
+## Running end-to-end tests
 
-### 3) Nastavení
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-Nastavit CityVizor je nutné v následujících konfiguračních souborech:
+## Further help
 
-- ```/server/config/config.production.js``` - nastavení serveru v produkčním módu, vzor v config.production.example.js
-- ```/server/config/config.development.js``` - nastavení serveru ve vývojovém módu, vzor v config.development.example.js
-- ```/src/config/config.js``` - nastavení GUI
-
-Další možná nastavení:
-
-- ```/server/config/import-config.js``` - nastavení pravidel importu dat z CSV
-- ```/server/config/mongo-express-config.js``` - nastavení mongo-express
-- ```/pm2-config.json``` - nastavení pro PM2
-
-## Výchozí data
-
-Administrátorský účet lze vytvořit spuštěním skriptu create-admin.js:
-```
-NODE_ENV=development node server/scripts/create-admin.js
-NODE_ENV=production node server/scripts/create-admin.js
-```
-
-Vzorové číselníky rozpočtových paragrafů a položek lze do databáze vložit skriptem sample-codelists
-```
-NODE_ENV=development node server/scripts/sample-codelists.js
-NODE_ENV=production node server/scripts/create-admin.js
-```
-
-## Spuštění
-
-**Spuštění serveru**
-
-```
-npm start
-```
-
-**Spuštění cron scriptu automatických exportů a načítání smluv**
-
-```
-npm run cron
-```
-
-**Spuštění serverového clusteru dle počtu CPU a cron scriptu pomocí PM2**
-
-```
-npm install pm2 -g
-
-pm2 start pm2-config.json --env production
-```
-
-## Spuštění pro vývoj
-
-- Server se zrestartuje a kód překompiluje při jakékoliv změně.
-- Na adrese /db běží ```mongo-express```
-
-```
-npm run dev
-```
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
